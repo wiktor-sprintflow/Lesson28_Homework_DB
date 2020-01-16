@@ -1,17 +1,28 @@
 package pl.javastart.sellegro.auction;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "auctions")
 public class Auction {
 
+    @Id
+    @GeneratedValue
     private Long id;
     private String title;
+    @Column(name = "carmake")
     private String carMake;
+    @Column(name = "carmodel")
     private String carModel;
     private String color;
     private BigDecimal price;
+    @Column(name = "enddate")
     private LocalDate endDate;
+
+    public Auction() {
+    }
 
     public Auction(Long id, String title, String carMake, String carModel, String color, BigDecimal price, LocalDate endDate) {
         this.id = id;
