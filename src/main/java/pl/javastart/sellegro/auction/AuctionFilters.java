@@ -7,6 +7,13 @@ public class AuctionFilters {
     private String carModel;
     private String color;
 
+    public AuctionFilters(String title, String carMaker, String carModel, String color) {
+        this.title = "";
+        this.carMaker = "";
+        this.carModel = "";
+        this.color = "";
+    }
+
     public String getTitle() { return title; }
 
     public void setTitle(String title) {
@@ -36,4 +43,6 @@ public class AuctionFilters {
     public void setColor(String color) {
         this.color = color;
     }
+
+
 }

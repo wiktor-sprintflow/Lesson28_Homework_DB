@@ -2,12 +2,15 @@ package pl.javastart.sellegro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import pl.javastart.sellegro.repository.DataInitializer;
 
 @SpringBootApplication
 public class SellegroApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SellegroApplication.class, args);
+        new DataInitializer();
     }
+
 
 }
