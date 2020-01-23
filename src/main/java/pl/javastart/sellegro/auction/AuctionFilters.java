@@ -7,12 +7,12 @@ public class AuctionFilters {
     private String carModel;
     private String color;
 
-    public AuctionFilters(String title, String carMaker, String carModel, String color) {
-        this.title = "";
-        this.carMaker = "";
-        this.carModel = "";
-        this.color = "";
-    }
+//    public AuctionFilters(String title, String carMaker, String carModel, String color) {
+//        this.title = "";
+//        this.carMaker = "";
+//        this.carModel = "";
+//        this.color = "";
+//    }
 
     public String getTitle() { return title; }
 

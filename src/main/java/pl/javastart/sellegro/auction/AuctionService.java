@@ -34,10 +34,10 @@ public class AuctionService {
 
     public List<Auction> findAllForFilters(AuctionFilters auctionFilters) {
 
-        Optional<String> optionalTitle = Optional.of(auctionFilters.getTitle());
-        Optional<String> optionalCarMake = Optional.of(auctionFilters.getCarMaker());
-        Optional<String> optionalCarModel = Optional.of(auctionFilters.getCarModel());
-        Optional<String> optionalColor = Optional.of(auctionFilters.getColor());
+        Optional<String> optionalTitle = Optional.ofNullable(auctionFilters.getTitle());
+        Optional<String> optionalCarMake = Optional.ofNullable(auctionFilters.getCarMaker());
+        Optional<String> optionalCarModel = Optional.ofNullable(auctionFilters.getCarModel());
+        Optional<String> optionalColor = Optional.ofNullable(auctionFilters.getColor());
 
         String title = optionalTitle.orElse("");
         String carMake = optionalCarMake.orElse("");
